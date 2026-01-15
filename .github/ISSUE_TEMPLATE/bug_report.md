@@ -1,6 +1,6 @@
 ---
 name: Bug report （Bug反馈）
-about: 报告一个软件的BUG来让NotionNext变得更好
+about: 报告一个软件的BUG来让ShowlookFans变得更好
 title: ''
 labels: bug
 assignees: tangly1024
@@ -22,7 +22,7 @@ assignees: tangly1024
 
 **环境**
 
-- 【必填】NotionNext版本 [例如. 4.0.18]
+- 【必填】ShowlookFans版本 [例如. 4.0.18]
 - 【必填】主题 [例如. hexo]
 - 【必填】部署方案 [例如. vercel]
 - 【可选】操作系统: [例如. iOS, Android, macOS, windows]

@@ -1,8 +1,8 @@
-// 注: process.env.XX是Vercel的环境变量，配置方式见：https://docs.tangly1024.com/article/how-to-config-notion-next#c4768010ae7d44609b744e79e2f9959a
+// 注: process.env.XX是Vercel的环境变量，配置方式见：https://xiaolu.love
 
 const BLOG = {
   API_BASE_URL: process.env.API_BASE_URL || 'https://www.notion.so/api/v3', // API默认请求地址,可以配置成自己的地址例如：https://[xxxxx].notion.site/api/v3
-  // Important page_id！！！Duplicate Template from  https://tanghh.notion.site/02ab3b8678004aa69e9e415905ef32a5
+  // Important page_id！！！Duplicate Template from  https://xiaolu.love
   NOTION_PAGE_ID:
     process.env.NOTION_PAGE_ID ||
     '02ab3b8678004aa69e9e415905ef32a5,en:7c1d570661754c8fbc568e00a01fd70e',
@@ -17,7 +17,7 @@ const BLOG = {
 
   AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'Showlook Fans', // 您的昵称 例如 tangly1024
   BIO: process.env.NEXT_PUBLIC_BIO || 'Showlook', // 作者简介
-  LINK: process.env.NEXT_PUBLIC_LINK || 'https://showlook.love', // 网站地址
+  LINK: process.env.NEXT_PUBLIC_LINK || 'https://xiaolu.love', // 网站地址
   KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'SHOWLOOK, 小鹿, 抗衰, 热玛吉, 皮肤抗衰, 除皱, 美白, 紧致, 射频抗衰', // 网站关键词 英文逗号隔开
   BLOG_FAVICON: process.env.NEXT_PUBLIC_FAVICON || '/favicon.ico', // blog favicon 配置, 默认使用 /public/favicon.ico，支持在线图片，如 https://img.imesong.com/favicon.png
   BEI_AN: process.env.NEXT_PUBLIC_BEI_AN || '', // 备案号 闽ICP备XXXXXX

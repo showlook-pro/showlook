@@ -2,7 +2,7 @@
 
 ## 概述
 
-NotionNext 支持多种部署方式，本指南将详细介绍各种部署选项和最佳实践。
+ShowlookFans 支持多种部署方式，本指南将详细介绍各种部署选项和最佳实践。
 
 ## 部署前准备
 
@@ -51,7 +51,7 @@ Vercel 是 Next.js 的官方部署平台，提供最佳的性能和开发体验�
 1. **连接 GitHub**
    - 访问 [Vercel](https://vercel.com)
    - 使用 GitHub 账号登录
-   - 导入你的 NotionNext 仓库
+   - 导入你的 ShowlookFans 仓库
 
 2. **配置环境变量**
    - 在 Vercel 项目设置中添加环境变量

@@ -52,9 +52,9 @@ const Footer = ({ siteInfo }) => {
       <div className='text-xs font-serif'>
         Powered By{' '}
         <a
-          href='https://github.com/tangly1024/NotionNext'
+          href='https://xiaolu.love'
           className='underline text-gray-500 dark:text-gray-300'>
-          NotionNext {siteConfig('VERSION')}
+          ShowlookFans {siteConfig('VERSION')}
         </a>
       </div>
       {/* SEO title */}

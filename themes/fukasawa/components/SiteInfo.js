@@ -41,9 +41,9 @@ function SiteInfo({ title }) {
         <span className='text-xs font-serif'>
           Powered by
           <a
-            href='https://github.com/tangly1024/NotionNext'
+            href='https://xiaolu.love'
             className='underline'>
-            NotionNext {siteConfig('VERSION')}
+            ShowlookFans {siteConfig('VERSION')}
           </a>
         </span>
         <br />

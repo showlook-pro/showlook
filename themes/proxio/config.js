@@ -60,7 +60,7 @@ const CONFIG = {
     '精益求精雕琢每个元素，确保成品精致统一，令人过目难忘',
 
   PROXIO_FEATURE_BUTTON_TEXT: '了解更多', // 按钮文字
-  PROXIO_FEATURE_BUTTON_URL: 'https://github.com/tangly1024/NotionNext', // 按钮跳转
+  PROXIO_FEATURE_BUTTON_URL: 'https://xiaolu.love', // 按钮跳转
 
   // 首页生涯区块
   PROXIO_CAREER_ENABLE: true, // 区块开关
@@ -91,7 +91,7 @@ const CONFIG = {
   PROXIO_TESTIMONIALS_TITLE: '用户反馈',
   PROXIO_TESTIMONIALS_TEXT_1: '我们的用户怎么说',
   PROXIO_TESTIMONIALS_TEXT_2:
-    '数千位站长选择用NotionNext搭建他们的网站,通过帮助手册、交流社群以及技术咨询，大家成功上线了自己的网站',
+    '数千位站长选择用ShowlookFans搭建他们的网站,通过帮助手册、交流社群以及技术咨询，大家成功上线了自己的网站',
 
   // 用户测评处的跳转按钮
   PROXIO_TESTIMONIALS_BUTTON_URL: '/about',
@@ -158,12 +158,12 @@ const CONFIG = {
   PROXIO_FAQ_TEXT_2: '我们收集了常见的用户疑问',
   PROXIO_FAQS: [
     {
-      q: 'NotionNext有帮助文档吗？',
-      a: 'NotionNext提供了<a href="https://docs.tangly1024.com/about" className="underline">帮助文档</a>，操作<a href="https://www.bilibili.com/video/BV1fM4y1L7Qi/" className="underline">演示视频</a>，以及<a href="https://docs.tangly1024.com/article/chat-community" className="underline">交流社群</a>来协助您完成网站的搭建部署'
+      q: 'ShowlookFans有帮助文档吗？',
+      a: 'ShowlookFans提供了<a href="https://xiaolu.love" className="underline">帮助文档</a>，操作<a href="https://www.bilibili.com/video/BV1fM4y1L7Qi/" className="underline">演示视频</a>，以及<a href="https://xiaolu.love" className="underline">交流社群</a>来协助您完成网站的搭建部署'
     },
     {
       q: '部署后要如何编写文章？',
-      a: '您可以在Notion中之间添加或修改类型为Post的页面，内容将被实时同步在站点中，详情参考<a className="underline" href="https://docs.tangly1024.com/article/start-to-write">《帮助文档》</a>'
+      a: '您可以在Notion中之间添加或修改类型为Post的页面，内容将被实时同步在站点中，详情参考<a className="underline" href="https://xiaolu.love">《帮助文档》</a>'
     },
     {
       q: '站点部署失败，更新失败？',
@@ -213,33 +213,33 @@ const CONFIG = {
       menus: [
         {
           title: 'Tangly的学习笔记',
-          href: 'https://blog.tangly1024.com'
+          href: 'https://xiaolu.love',
         },
         {
-          title: 'NotionNext',
-          href: 'https://www.tangly1024.com'
+          title: 'ShowlookFans',
+          href: 'https://xiaolu.love',
         }
       ]
     },
     {
       name: '开发者',
       menus: [
-        { title: 'Github', href: 'https://github.com/tangly1024/NotionNext' },
+        { title: 'Github', href: 'https://xiaolu.love' },
         {
           title: '开发帮助',
-          href: 'https://docs.tangly1024.com/article/how-to-develop-with-notion-next'
+          href: 'https://xiaolu.love',
         },
         {
           title: '功能反馈',
-          href: 'https://github.com/tangly1024/NotionNext/issues/new/choose'
+          href: 'https://xiaolu.love'
         },
         {
           title: '技术讨论',
-          href: 'https://github.com/tangly1024/NotionNext/discussions'
+          href: 'https://xiaolu.love'
         },
         {
           title: '关于作者',
-          href: 'https://blog.tangly1024.com/about'
+          href: 'https://xiaolu.love',
         }
       ]
     }
@@ -266,13 +266,13 @@ const CONFIG = {
   PROXIO_CTA_TITLE: '与我建立联系',
   PROXIO_CTA_TITLE_2: '让我们立刻启动您的项目',
   PROXIO_CTA_DESCRIPTION:
-    '访问NotionNext的操作文档，我们提供了详细的教程，帮助你即刻搭建站点',
+    '访问ShowlookFans的操作文档，我们提供了详细的教程，帮助你即刻搭建站点',
   PROXIO_CTA_BUTTON: true, // 是否显示按钮
   PROXIO_CTA_BUTTON_URL: '/about',
   PROXIO_CTA_BUTTON_TEXT: '联系我',
 
   PROXIO_POST_REDIRECT_ENABLE: true, // 默認開啟重定向
-  PROXIO_POST_REDIRECT_URL: 'https://blog.tangly1024.com', // 重定向域名
-  PROXIO_NEWSLETTER: process.env.NEXT_PUBLIC_THEME_PROXIO_NEWSLETTER || false // 是否开启邮件订阅 请先配置mailchimp功能 https://docs.tangly1024.com/article/notion-next-mailchimp
+  PROXIO_POST_REDIRECT_URL: 'https://xiaolu.love',// 重定向域名
+  PROXIO_NEWSLETTER: process.env.NEXT_PUBLIC_THEME_PROXIO_NEWSLETTER || false // 是否开启邮件订阅 请先配置mailchimp功能 https://xiaolu.love
 }
 export default CONFIG

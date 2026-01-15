@@ -13,7 +13,7 @@
 ```bash
 # 克隆项目
 git clone <repository-url>
-cd NotionNext
+cd ShowlookFans
 
 # 初始化开发环境
 npm run init-dev
@@ -81,7 +81,7 @@ npm run remove-hooks
 ## 项目结构
 
 ```
-NotionNext/
+ShowlookFans/
 ├── components/          # React组件
 ├── pages/              # Next.js页面
 ├── lib/                # 工具库和配置
