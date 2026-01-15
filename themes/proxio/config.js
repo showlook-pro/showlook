@@ -2,11 +2,11 @@
  * 另一个落地页主题
  */
 const CONFIG = {
-  PROXIO_WELCOME_COVER_ENABLE: true, //是否显示页面进入的欢迎文字
+  PROXIO_WELCOME_COVER_ENABLE: false, //是否显示页面进入的欢迎文字
   PROXIO_WELCOME_TEXT: '欢迎来到此网站，点击任意位置进入', // 欢迎文字，留空则不启用
 
   // 英雄区块导航
-  PROXIO_HERO_ENABLE: true, // 开启英雄区
+  PROXIO_HERO_ENABLE: false, // 开启英雄区
   PROXIO_HERO_TITLE_1: '开源且免费的基于 Notion 笔记的网站构建工具', // 英雄区文字
   PROXIO_HERO_TITLE_2: '通过笔记无感知地建站、成倍放大您的价值', // 英雄区文字
   // 英雄区两个按钮，如果TEXT留空则隐藏按钮
@@ -36,7 +36,7 @@ const CONFIG = {
   PROXIO_ANNOUNCEMENT_ENABLE: true, //公告文字区块
 
   // 特性区块
-  PROXIO_FEATURE_ENABLE: true, // 特性区块开关
+  PROXIO_FEATURE_ENABLE: false, // 特性区块开关
   PROXIO_FEATURE_TITLE: '为什么选我',
   PROXIO_FEATURE_TEXT_1: '我能让您的项目焕发光彩',
   PROXIO_FEATURE_TEXT_2: '丰富的案例经验，专业的技术服务，优质的沟通效率',
