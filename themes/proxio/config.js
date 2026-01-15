@@ -13,7 +13,7 @@ const CONFIG = {
   PROXIO_HERO_BUTTON_1_TEXT: '中国区官网', // 英雄区按钮
   PROXIO_HERO_BUTTON_1_URL:
     '#', // 英雄区按钮
-  PROXIO_HERO_BUTTON_2_TEXT: '了解仪器原理', // 英雄区按钮
+  PROXIO_HERO_BUTTON_2_TEXT: '了解射频抗衰原理', // 英雄区按钮
   PROXIO_HERO_BUTTON_2_URL: '#', // 英雄区按钮
   PROXIO_HERO_BUTTON_2_ICON: '/images/starter/github-mark.svg', // 英雄区按钮2的图标，不需要则留空
 
@@ -23,9 +23,9 @@ const CONFIG = {
 
   // 文章区块
   PROXIO_BLOG_ENABLE: true, // 首页博文区块开关
-  PROXIO_BLOG_TITLE: '作品',
+  PROXIO_BLOG_TITLE: 'SHOWLOOK NEWS',
   PROXIO_BLOG_COUNT: 4, // 首页博文区块展示前4篇文章
-  PROXIO_BLOG_TEXT_1: '我的最新动态',
+  PROXIO_BLOG_TEXT_1: 'SHOWLOOK 最新动态',
 
   // 区块默认内容显示文章的summary文本，但也支持用自定义图片或logo德国替换掉占位显示内容
   PROXIO_BLOG_PLACEHOLDER_IMG_URL_1: '', // 填写要替换成的图片，支持图床或直接上传到项目中，示例  /images/feature-1.webp
@@ -36,7 +36,7 @@ const CONFIG = {
   PROXIO_ANNOUNCEMENT_ENABLE: true, //公告文字区块
 
   // 特性区块
-  PROXIO_FEATURE_ENABLE: false, // 特性区块开关
+  PROXIO_FEATURE_ENABLE: true, // 特性区块开关
   PROXIO_FEATURE_TITLE: '为什么选我',
   PROXIO_FEATURE_TEXT_1: '我能让您的项目焕发光彩',
   PROXIO_FEATURE_TEXT_2: '丰富的案例经验，专业的技术服务，优质的沟通效率',
@@ -177,8 +177,8 @@ const CONFIG = {
 
   // 关于作者区块
   PROXIO_ABOUT_ENABLE: true, // 关于作者区块区块开关
-  PROXIO_ABOUT_TITLE: '关于作者',
-  PROXIO_ABOUT_TEXT_1: 'I am an Architect Turned Into a Product Designer',
+  PROXIO_ABOUT_TITLE: 'FawnPower FP01',
+  PROXIO_ABOUT_TEXT_1: '射频抗衰新答案 Showlook肤动能',
   PROXIO_ABOUT_TEXT_2:
     'With a background in architecture, I now apply my expertise to product design, blending aesthetics, functionality, and innovation. My goal is to create modern, user-focused designs that bring your vision to life.',
   PROXIO_ABOUT_PHOTO_URL: '/avatar.png',
@@ -192,7 +192,7 @@ const CONFIG = {
   PROXIO_ABOUT_VAL_4: '10000+',
 
   PROXIO_ABOUT_BUTTON_URL: '/about',
-  PROXIO_ABOUT_BUTTON_TEXT: '关于我',
+  PROXIO_ABOUT_BUTTON_TEXT: '详细了解 Showlook肤动能',
 
   // 横向滚动文字
   PROXIO_BRANDS_ENABLE: true, // 滚动文字
