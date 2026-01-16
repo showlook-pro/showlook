@@ -65,25 +65,25 @@ const CONFIG = {
 
   // 首页生涯区块
   PROXIO_CAREER_ENABLE: true, // 区块开关
-  PROXIO_CAREER_TITLE: '生涯',
-  PROXIO_CAREER_TEXT: '以下是我的职业生涯',
+  PROXIO_CAREER_TITLE: '热玛吉Thermage低价平替方案',
+  PROXIO_CAREER_TEXT: '肤动能FawnPower FP01入坑指南',
 
   // 生涯内容卡牌 ，title是标题 ，bio是备注，text是详情
   PROXIO_CAREERS: [
     {
-      title: 'Freelance Architect',
-      bio: '2016-2020',
-      text: 'As a freelance architect, I worked on a range of residential and commercial projects, balancing form and function. I collaborated with clients and contractors to transform concepts into reality, ensuring each design was both aesthetically pleasing and structurally sound.'
+      title: '认识她',
+      bio: '把好奇变成清晰',
+      text: '抗衰不是一场冲刺，更像一次缓慢但有方向的整理。射频的意义，在于以温和、可控的热效应唤醒皮肤深层的支撑逻辑，让胶原在时间里收缩、重排、再生。先理解“它能做什么”，也理解“它不会承诺什么”，你就不会被情绪带着走，而能把选择握在手里。'
     },
     {
-      title: 'Product Designer at Spotify',
-      bio: '2020-2022',
-      text: 'At Spotify, I helped shape innovative features for millions of users globally. My focus was on creating seamless music discovery experiences, enhancing user interfaces, and optimizing cross-platform navigation, which led to an improved product flow and increased user satisfaction.'
+      title: '体验她',
+      bio: '把感觉变成感受',
+      text: '第一次到店，别急着追结论。把诉求说清楚，把部位选清楚，把对比照拍清楚——同光线、同角度、同表情。热感、痛感、即时紧致感，都不是答案本身，它们只是你与皮肤对话的第一句。真正重要的是：让每一次体验都能被记录、被比较、被复盘。'
     },
     {
-      title: 'Freelance Product Designer',
-      bio: '2022-Now',
-      text: 'Now I design user-centric products that align with client visions. As a freelance product designer, I collaborate with startups and established companies, crafting solutions that elevate user experiences and increase engagement across both digital and physical interfaces.'
+      title: '感受她',
+      bio: '把变化交给时间',
+      text: '术后不需要“用力”，只需要“温柔而坚定”：保湿、防晒、避免刺激与高温，把皮肤的节奏还给皮肤。之后你会发现，真正可贵的不是某一刻的惊喜，而是轮廓线慢慢变得利落、质地慢慢变得细腻——那种从容，是你自己一点点养出来的。'
     }
   ],
 
@@ -181,16 +181,16 @@ const CONFIG = {
   PROXIO_ABOUT_TITLE: '射频抗衰新答案',
   PROXIO_ABOUT_TEXT_1: 'FawnPower肤动能 FP01',
   PROXIO_ABOUT_TEXT_2:
-    'With a background in architecture, I now apply my expertise to product design, blending aesthetics, functionality, and innovation. My goal is to create modern, user-focused designs that bring your vision to life.',
+    '肤动能(FawnPower FP01)通过温和热效应刺激胶原蛋白收缩与新生，从肌底重构胶原支架。得益于重新架构的高效射频方案，成本较热玛吉大幅降低，目前已成成为在亚洲多个城市，成为大家优选的热玛吉低价平替方案。',
   PROXIO_ABOUT_PHOTO_URL: 'https://gitee.com/jz391/img-host/raw/master/avat-cg3.webp',
-  PROXIO_ABOUT_KEY_1: '经验年限',
-  PROXIO_ABOUT_VAL_1: '10年+',
-  PROXIO_ABOUT_KEY_2: '客户',
-  PROXIO_ABOUT_VAL_2: '1000+',
-  PROXIO_ABOUT_KEY_3: '交付项目',
-  PROXIO_ABOUT_VAL_3: '5000+',
-  PROXIO_ABOUT_KEY_4: '累积创作时长（小时）',
-  PROXIO_ABOUT_VAL_4: '10000+',
+  PROXIO_ABOUT_KEY_1: '核心频段',
+  PROXIO_ABOUT_VAL_1: '6.78MHZ',
+  PROXIO_ABOUT_KEY_2: '单次时长',
+  PROXIO_ABOUT_VAL_2: '60-90min',
+  PROXIO_ABOUT_KEY_3: '适应部位',
+  PROXIO_ABOUT_VAL_3: '6+',
+  PROXIO_ABOUT_KEY_4: '恢复期',
+  PROXIO_ABOUT_VAL_4: '0天',
 
   PROXIO_ABOUT_BUTTON_URL: '/about',
   PROXIO_ABOUT_BUTTON_TEXT: '详细了解 Showlook肤动能',
