@@ -7,8 +7,8 @@ const CONFIG = {
 
   // 英雄区块导航
   PROXIO_HERO_ENABLE: true, // 开启英雄区
-  PROXIO_HERO_TITLE_1: '轮廓更清楚 肤质更平滑 气色更明亮', // 英雄区文字
-  PROXIO_HERO_TITLE_2: '射频抗衰新宠 风靡明星圈的抗衰答案', // 英雄区文字
+  PROXIO_HERO_TITLE_1: '射频抗衰新宠 风靡明星圈的抗衰答案', // 英雄区文字
+  PROXIO_HERO_TITLE_2: '肤动能FawnPower FP01', // 英雄区文字
   // 英雄区两个按钮，如果TEXT留空则隐藏按钮
   PROXIO_HERO_BUTTON_1_TEXT: '中国区官网', // 英雄区按钮
   PROXIO_HERO_BUTTON_1_URL:
