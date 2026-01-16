@@ -160,12 +160,16 @@ const Style = () => {
     transition: filter 0.2s ease;
   }
 
+  #theme-proxio .ud-header .header-logo-icon{
+    filter: brightness(0) invert(1);
+  }
+
   html:not(.dark) #theme-proxio .footer-logo-icon{
-    filter: brightness(0) saturate(100%);
+    filter: none;
   }
 
   html.dark #theme-proxio .footer-logo-icon{
-    filter: none;
+    filter: brightness(0) invert(1);
   }
 
   #navbarCollapse li .ud-menu-scroll.active{
