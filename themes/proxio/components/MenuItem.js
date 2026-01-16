@@ -1,22 +1,19 @@
 import SmartLink from '@/components/SmartLink'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
 
 /**
  * 菜单链接
  * @param {*} param0
  * @returns
  */
-export const MenuItem = ({ link }) => {
+export const MenuItem = ({
+  link,
+  isSubMenuOpen = false,
+  onToggleSubMenu,
+  onCloseSubMenu
+}) => {
   const hasSubMenu = link?.subMenus?.length > 0
   const router = useRouter()
-
-  // 管理子菜单的展开状态
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false)
-
-  const toggleSubMenu = () => {
-    setIsSubMenuOpen(prev => !prev) // 切换子菜单状态
-  }
 
   return (
     <>
@@ -41,7 +38,7 @@ export const MenuItem = ({ link }) => {
       {hasSubMenu && (
         <li className='submenu-item group relative whitespace-nowrap'>
           <button
-            onClick={toggleSubMenu}
+            onClick={onToggleSubMenu}
             className={`cursor-pointer relative px-8 flex items-center justify-between py-2 text-sm font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 ${
               router.route === '/'
                 ? 'lg:text-white lg:group-hover:text-white'
@@ -75,6 +72,7 @@ export const MenuItem = ({ link }) => {
                 key={index}
                 href={sLink.href}
                 target={link?.target}
+                onClick={onCloseSubMenu}
                 className='block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary'>
                 {/* 子菜单 SubMenuItem */}
                 <span className='text-md ml-2 whitespace-nowrap'>
