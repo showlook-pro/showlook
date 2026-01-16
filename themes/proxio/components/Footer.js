@@ -39,7 +39,9 @@ export const Footer = ({ title }) => {
                 {siteConfig('AUTHOR')}
               </span>
             </div>
-            <div className='px-1'>{siteConfig('DESCRIPTION')}</div>
+            <div className='px-1 whitespace-pre-line'>
+              {siteConfig('DESCRIPTION')}
+            </div>
             <div className='px-1'>{siteConfig('CONTACT_EMAIL')}</div>
           </div>
 
