@@ -20,18 +20,18 @@ export const CTA = () => {
             <div className='-mx-4 flex flex-wrap items-stretch'>
               <div className='w-full px-4 mb-2'>
                 <div className='mx-auto max-w-[570px] text-center wow fadeInUp' data-wow-delay='.2s'>
-                  <div>
+                  <div className='mb-3'>
                     <span className='px-3 py-0.5 rounded-2xl dark:bg-dark-1 border border-gray-200 dark:border-[#333333] dark:text-white'>
                       {siteConfig('PROXIO_CTA_TITLE')}
                     </span>
                   </div>
-                  <h2 className='mb-2.5 text-3xl font-bold dark:text-white md:text-[38px] md:leading-[1.44]'>
+                  <h2 className='mb-4 text-3xl font-bold dark:text-white md:text-[38px] md:leading-[1.44]'>
 
                     <span className='text-3xl font-normal md:text-[40px]'>
                       {siteConfig('PROXIO_CTA_TITLE_2')}
                     </span>
                   </h2>
-                  <p className='mx-auto mb-6 max-w-[515px] text-base leading-[1.5] dark:text-white'>
+                  <p className='mx-auto mb-8 max-w-[515px] text-base leading-[1.5] dark:text-white'>
                     {siteConfig('PROXIO_CTA_DESCRIPTION')}
                   </p>
                   {siteConfig('PROXIO_CTA_BUTTON') && (

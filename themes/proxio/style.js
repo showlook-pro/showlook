@@ -130,6 +130,44 @@ const Style = () => {
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 
+  #theme-proxio .ud-header.nav-solid .header-logo-text,
+  #theme-proxio .ud-header.nav-solid .ud-menu-scroll,
+  #theme-proxio .ud-header.nav-solid .submenu-item > button{
+    color: #ffffff;
+  }
+
+  #theme-proxio .ud-header.nav-transparent.nav-inner .header-logo-text,
+  #theme-proxio .ud-header.nav-transparent.nav-inner .ud-menu-scroll,
+  #theme-proxio .ud-header.nav-transparent.nav-inner .submenu-item > button{
+    color: #111928;
+  }
+
+  #theme-proxio .ud-header.nav-transparent.nav-home .header-logo-text,
+  #theme-proxio .ud-header.nav-transparent.nav-home .ud-menu-scroll,
+  #theme-proxio .ud-header.nav-transparent.nav-home .submenu-item > button{
+    color: #ffffff;
+  }
+
+  #theme-proxio .ud-header.nav-transparent.nav-inner #navbarToggler span{
+    background-color: #111928;
+  }
+
+  #theme-proxio .ud-header.nav-solid #navbarToggler span{
+    background-color: #ffffff;
+  }
+
+  #theme-proxio .ud-header .header-logo-icon{
+    transition: filter 0.2s ease;
+  }
+
+  html:not(.dark) #theme-proxio .footer-logo-icon{
+    filter: brightness(0) saturate(100%);
+  }
+
+  html.dark #theme-proxio .footer-logo-icon{
+    filter: none;
+  }
+
   #navbarCollapse li .ud-menu-scroll.active{
     opacity: 0.7;
   }

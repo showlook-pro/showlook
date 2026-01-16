@@ -29,7 +29,7 @@ export const Footer = ({ title }) => {
             <div className='flex gap-x-1'>
               <LazyImage
                 src={siteInfo?.icon}
-                className='rounded-full'
+                className='rounded-full footer-logo-icon'
                 width={24}
                 alt={siteConfig('AUTHOR')}
               />

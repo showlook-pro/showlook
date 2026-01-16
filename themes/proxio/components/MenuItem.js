@@ -1,5 +1,4 @@
 import SmartLink from '@/components/SmartLink'
-import { useRouter } from 'next/router'
 
 /**
  * 菜单链接
@@ -13,7 +12,6 @@ export const MenuItem = ({
   onCloseSubMenu
 }) => {
   const hasSubMenu = link?.subMenus?.length > 0
-  const router = useRouter()
 
   return (
     <>
@@ -23,11 +21,7 @@ export const MenuItem = ({
           <SmartLink
             href={link?.href}
             target={link?.target}
-            className={`ud-menu-scroll mx-8 flex py-2 text-sm font-medium text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
-              router.route === '/'
-                ? 'lg:text-white lg:group-hover:text-white'
-                : ''
-            } lg:group-hover:opacity-70`}>
+            className='ud-menu-scroll mx-8 flex py-2 text-sm font-medium text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-4 lg:group-hover:opacity-70'>
             {link?.icon && <i className={link.icon + ' mr-2 my-auto'} />}
             {link?.name}
           </SmartLink>
@@ -39,11 +33,7 @@ export const MenuItem = ({
         <li className='submenu-item group relative whitespace-nowrap'>
           <button
             onClick={onToggleSubMenu}
-            className={`cursor-pointer relative px-8 flex items-center justify-between py-2 text-sm font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 ${
-              router.route === '/'
-                ? 'lg:text-white lg:group-hover:text-white'
-                : ''
-            } lg:group-hover:opacity-70 xl:ml-10`}>
+            className='cursor-pointer relative px-8 flex items-center justify-between py-2 text-sm font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-4 lg:pl-0 lg:pr-4 lg:group-hover:opacity-70 xl:ml-10'>
             <span>
               {link?.icon && <i className={link.icon + ' mr-2 my-auto'} />}
               {link?.name}
@@ -62,10 +52,10 @@ export const MenuItem = ({
 
           {/* 子菜单 */}
           <div
-            className={`submenu dark:border-gray-600 relative left-0 top-full w-[250px] rounded-sm bg-white p-4 transition-all duration-300 dark:bg-dark-2 lg:absolute lg:shadow-lg ${
+            className={`submenu dark:border-gray-600 relative left-0 top-full w-[250px] rounded-sm bg-white p-4 transition-all duration-200 ease-out dark:bg-dark-2 lg:absolute lg:shadow-lg ${
               isSubMenuOpen
-                ? 'block opacity-100 visible'
-                : 'hidden opacity-0 invisible'
+                ? 'opacity-100 translate-y-0 pointer-events-auto'
+                : 'opacity-0 -translate-y-2 pointer-events-none'
             }`}>
             {link.subMenus.map((sLink, index) => (
               <SmartLink

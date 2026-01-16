@@ -42,14 +42,14 @@ export const Logo = props => {
 
   return (
     <div className='w-60 max-w-full px-4'>
-      <div className='navbar-logo flex items-center w-full py-5 cursor-pointer'>
+      <div className='navbar-logo flex items-center w-full py-3 lg:py-4 cursor-pointer'>
         <LazyImage
           priority
           src={siteInfo?.icon}
           width={24}
           height={20}
           alt={siteConfig('AUTHOR')}
-          className='mr-2 hidden md:inline-block'
+          className='mr-2 hidden md:inline-block header-logo-icon'
         />
         {/* logo文字 */}
         <span

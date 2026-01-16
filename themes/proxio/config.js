@@ -38,29 +38,27 @@ const CONFIG = {
 
   // 特性区块
   PROXIO_FEATURE_ENABLE: true, // 特性区块开关
-  PROXIO_FEATURE_TITLE: '为什么选我',
-  PROXIO_FEATURE_TEXT_1: '我能让您的项目焕发光彩',
-  PROXIO_FEATURE_TEXT_2: '丰富的案例经验，专业的技术服务，优质的沟通效率',
+  PROXIO_FEATURE_TITLE: '把每一次选择，交给更清晰的记录',
+  PROXIO_FEATURE_TEXT_1: '把体验写成证据',
+  PROXIO_FEATURE_TEXT_2: '不夸张、不滤镜，整理真实感受、公开反馈与对比过程',
 
   // 特性1
   PROXIO_FEATURE_1_ICON_CLASS: 'fa-solid fa-stopwatch', // fas图标
   PROXIO_FEATURE_1_ICON_IMG_URL: '', // 图片图标选填，默认是fas图标，如果需要图片图标可以填写图片地址，示例/avatar.png
-  PROXIO_FEATURE_1_TITLE_1: '高效工作流程',
-  PROXIO_FEATURE_1_TEXT_1:
-    '精简的设计流程确保快速交付，在紧迫的工期下仍能保证品质与细节不打折扣。',
+  PROXIO_FEATURE_1_TITLE_1: '顾客体验',
+  PROXIO_FEATURE_1_TEXT_1: '到店流程与当次体感，一次一页。',
 
   PROXIO_FEATURE_2_ICON_CLASS: 'fa-solid fa-comments',
   PROXIO_FEATURE_2_ICON_IMG_URL: '',
-  PROXIO_FEATURE_2_TITLE_1: '协作式流程',
-  PROXIO_FEATURE_2_TEXT_1: '与你紧密合作，融合反馈意见，打造超越预期的设计',
+  PROXIO_FEATURE_2_TITLE_1: '用户反馈',
+  PROXIO_FEATURE_2_TEXT_1: '用户发来的回访与私信，精选归档呈现。',
 
   PROXIO_FEATURE_3_ICON_CLASS: 'fa-solid fa-search',
   PROXIO_FEATURE_3_ICON_IMG_URL: '',
-  PROXIO_FEATURE_3_TITLE_1: '细节把控',
-  PROXIO_FEATURE_3_TEXT_1:
-    '精益求精雕琢每个元素，确保成品精致统一，令人过目难忘',
+  PROXIO_FEATURE_3_TITLE_1: '案例/对比/过程记录',
+  PROXIO_FEATURE_3_TEXT_1: '统一标准拍摄，时间轴复盘变化。',
 
-  PROXIO_FEATURE_BUTTON_TEXT: '了解更多', // 按钮文字
+  PROXIO_FEATURE_BUTTON_TEXT: '查看全部记录', // 按钮文字
   PROXIO_FEATURE_BUTTON_URL: 'https://xiaolu.love', // 按钮跳转
 
   // 首页生涯区块
@@ -73,7 +71,7 @@ const CONFIG = {
     {
       title: '认识她',
       bio: '把好奇变成清晰',
-      text: '抗衰不是一场冲刺，更像一次缓慢但有方向的整理。射频的意义，在于以温和、可控的热效应唤醒皮肤深层的支撑逻辑，让胶原在时间里收缩、重排、再生。先理解“它能做什么”，也理解“它不会承诺什么”，你就不会被情绪带着走，而能把选择握在手里。'
+      text: '抗衰不是一场冲刺，更像一次缓慢但有方向的整理。射频的意义，在于以温和、可控的射频热效应唤醒皮肤深层的支撑逻辑，让胶原在时间里收缩、重排、再生。先理解“它能做什么”，也理解“它不会承诺什么”，你就不会被情绪带着走，而能把选择握在手里。'
     },
     {
       title: '体验她',
@@ -88,7 +86,7 @@ const CONFIG = {
   ],
 
   // 首页用户测评区块
-  PROXIO_TESTIMONIALS_ENABLE: true, // 测评区块开关
+  PROXIO_TESTIMONIALS_ENABLE: false, // 测评区块开关
   PROXIO_TESTIMONIALS_TITLE: '用户反馈',
   PROXIO_TESTIMONIALS_TEXT_1: '我们的用户怎么说',
   PROXIO_TESTIMONIALS_TEXT_2:
@@ -153,7 +151,7 @@ const CONFIG = {
   ],
 
   //   FAQ 常见问题模块
-  PROXIO_FAQ_ENABLE: true, // 常见问题模块开关
+  PROXIO_FAQ_ENABLE: false, // 常见问题模块开关
   PROXIO_FAQ_TITLE: '常见问题解答',
   PROXIO_FAQ_TEXT_1: '有任何问题吗？请看这里',
   PROXIO_FAQ_TEXT_2: '我们收集了常见的用户疑问',
@@ -268,13 +266,13 @@ const CONFIG = {
 
   // 页面底部的行动呼吁模块
   PROXIO_CTA_ENABLE: true,
-  PROXIO_CTA_TITLE: '与我建立联系',
+  PROXIO_CTA_TITLE: '让合适的项目，遇见合适的机构',
   PROXIO_CTA_TITLE_2: '让我们立刻启动您的项目',
   PROXIO_CTA_DESCRIPTION:
-    '访问ShowlookFans的操作文档，我们提供了详细的教程，帮助你即刻搭建站点',
+    '如果有意引进FawnPower FP01，可点击下方按钮联系SHOWLOOK市场专员。他们将提供产品资料、培训与交付流程说明',
   PROXIO_CTA_BUTTON: true, // 是否显示按钮
-  PROXIO_CTA_BUTTON_URL: '/about',
-  PROXIO_CTA_BUTTON_TEXT: '联系我',
+  PROXIO_CTA_BUTTON_URL: '#',
+  PROXIO_CTA_BUTTON_TEXT: '与SHOWLOOK市场专员聊一聊',
 
   PROXIO_POST_REDIRECT_ENABLE: true, // 默認開啟重定向
   PROXIO_POST_REDIRECT_URL: 'https://xiaolu.love',// 重定向域名

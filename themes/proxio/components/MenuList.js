@@ -2,7 +2,7 @@ import BLOG from '@/blog.config'
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { MenuItem } from './MenuItem'
 
 /**
@@ -14,6 +14,7 @@ export const MenuList = props => {
 
   const [showMenu, setShowMenu] = useState(false) // 控制菜单展开/收起状态
   const [openSubMenuIndex, setOpenSubMenuIndex] = useState(null)
+  const menuRef = useRef(null)
   const router = useRouter()
 
   let links = [
@@ -61,12 +62,27 @@ export const MenuList = props => {
     setOpenSubMenuIndex(null)
   }, [router])
 
+  useEffect(() => {
+    const handleOutsideClick = event => {
+      if (!menuRef.current) {
+        return
+      }
+      if (!menuRef.current.contains(event.target)) {
+        setShowMenu(false)
+        setOpenSubMenuIndex(null)
+      }
+    }
+
+    document.addEventListener('mousedown', handleOutsideClick)
+    return () => document.removeEventListener('mousedown', handleOutsideClick)
+  }, [])
+
   if (!links || links.length === 0) {
     return null
   }
 
   return (
-    <div>
+    <div ref={menuRef}>
       {/* 移动端菜单切换按钮 */}
       <button
         id='navbarToggler'

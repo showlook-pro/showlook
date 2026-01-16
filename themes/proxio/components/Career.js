@@ -44,15 +44,15 @@ export const Career = () => {
 
 // 生涯内容
 const CareerItem = ({ title, bio, text }) => {
-  return <div className='w-full border-b mb-6 border-gray-200 dark:border-[#333333] px-4 flex justify-between wow fadeInUp'>
-    <div className='flex item-start flex-col items-start w-full' data-wow-delay='.1s'>
-      <h4 className='mb-3 text-xl text-dark dark:text-white'>
-        <span className='font-bold mr-4'>{title}</span>
-        <span className='text-sm'>{bio}</span>
+  return <div className='w-full border-b mb-6 border-gray-200 dark:border-[#333333] px-4 flex gap-x-4 md:gap-x-10 wow fadeInUp'>
+    <div className='flex item-start flex-col items-start w-28 flex-shrink-0 md:w-56' data-wow-delay='.1s'>
+      <h4 className='mb-3 text-xl text-dark dark:text-white flex flex-col md:flex-row md:items-baseline'>
+        <span className='font-bold md:mr-4'>{title}</span>
+        <span className='text-sm mt-1 md:mt-0'>{bio}</span>
       </h4>
 
     </div>
-    <div className='w-full'>
+    <div className='w-full md:flex-1'>
       <p className='mb-8 text-body-color dark:text-dark-6 lg:mb-9'>
         {text}
       </p>
