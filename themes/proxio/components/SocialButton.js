@@ -6,9 +6,25 @@ import { siteConfig } from '@/lib/config'
  * @constructor
  */
 const SocialButton = () => {
+  const hasSocialLinks = [
+    siteConfig('CONTACT_GITHUB'),
+    siteConfig('CONTACT_TWITTER'),
+    siteConfig('CONTACT_TELEGRAM'),
+    siteConfig('CONTACT_LINKEDIN'),
+    siteConfig('CONTACT_WEIBO'),
+    siteConfig('CONTACT_INSTAGRAM'),
+    siteConfig('CONTACT_EMAIL'),
+    siteConfig('CONTACT_BILIBILI'),
+    siteConfig('CONTACT_YOUTUBE')
+  ].some(Boolean)
+
+  if (!hasSocialLinks) {
+    return null
+  }
+
   return (
-    <div className='w-52 justify-center flex-wrap flex my-2'>
-      <div className='space-x-5 md:text-xl text-3xl text-gray-600 dark:text-gray-400 text-center'>
+    <div className='flex items-center'>
+      <div className='space-x-5 md:text-xl text-3xl text-gray-600 dark:text-gray-400'>
         {siteConfig('CONTACT_GITHUB') && (
           <a
             target='_blank'
@@ -70,15 +86,6 @@ const SocialButton = () => {
             title={'email'}
             href={`mailto:${siteConfig('CONTACT_EMAIL')}`}>
             <i className='fas fa-envelope transform hover:scale-125 duration-150' />
-          </a>
-        )}
-        {JSON.parse(siteConfig('ENABLE_RSS')) && (
-          <a
-            target='_blank'
-            rel='noreferrer'
-            title={'RSS'}
-            href={'/rss/feed.xml'}>
-            <i className='fas fa-rss transform hover:scale-125 duration-150' />
           </a>
         )}
         {siteConfig('CONTACT_BILIBILI') && (

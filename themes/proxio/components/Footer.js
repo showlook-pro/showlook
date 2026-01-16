@@ -39,17 +39,22 @@ export const Footer = ({ title }) => {
                 {siteConfig('AUTHOR')}
               </span>
             </div>
-            <div className='px-1 whitespace-pre-line'>
+            <div className='px-1 whitespace-pre-line text-sm leading-7 text-gray-500/80 dark:text-gray-400/80'>
               {siteConfig('DESCRIPTION')}
             </div>
             <div className='px-1'>{siteConfig('CONTACT_EMAIL')}</div>
           </div>
 
           {/* 右侧链接区块 */}
-          <div className='flex gap-x-4'>
+          <div className='mt-8 flex w-full justify-between gap-x-12 sm:w-auto sm:justify-start lg:mt-0'>
             {PROXIO_FOOTER_LINKS?.map((group, index) => {
               return (
-                <div key={index}>
+                <div
+                  key={index}
+                  className={`flex flex-col ${
+                    index === 0 ? 'items-start text-left' : 'items-end text-right'
+                  } sm:items-start sm:text-left`}
+                >
                   <div className='font-bold text-xl dark:text-white lg:pb-8 pb-4'>
                     {group.name}
                   </div>
@@ -71,19 +76,17 @@ export const Footer = ({ title }) => {
         </div>
 
         {/* 页脚 */}
-        <div className='dark:text-gray-200 py-4 flex flex-col lg:flex-row  justify-between items-center border-t border-gray-600'>
-          <div className='flex gap-x-2 flex-wrap justify-between items-center'>
+        <div className='dark:text-gray-200 py-4 flex flex-col gap-y-4 items-center text-center lg:flex-row lg:items-center lg:text-left border-t border-gray-600'>
+          <div className='flex gap-x-4 flex-wrap items-center justify-center lg:justify-start order-2 lg:order-1'>
             <CopyRightDate />
             <PoweredBy />
           </div>
 
-          <DarkModeButton className='dark:text-white' />
+          <DarkModeButton className='dark:text-white order-1 lg:order-2 lg:ml-4 lg:mr-auto' />
 
-          <div className='flex justify-between items-center gap-x-2'>
-            <div className='flex items-center gap-x-4'>
-              <AnalyticsBusuanzi />
-              <SocialButton />
-            </div>
+          <div className='flex items-center gap-x-4 justify-center lg:justify-end order-3'>
+            <AnalyticsBusuanzi />
+            <SocialButton />
           </div>
         </div>
 

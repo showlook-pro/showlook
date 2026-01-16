@@ -4,6 +4,7 @@
 const CONFIG = {
   PROXIO_WELCOME_COVER_ENABLE: false, //是否显示页面进入的欢迎文字
   PROXIO_WELCOME_TEXT: '欢迎来到此网站，点击任意位置进入', // 欢迎文字，留空则不启用
+  PROXIO_CURSOR_DOT_ENABLE: false, // 鼠标跟随圆点效果开关
 
   // 英雄区块导航
   PROXIO_HERO_ENABLE: true, // 开启英雄区
@@ -177,11 +178,11 @@ const CONFIG = {
 
   // 关于作者区块
   PROXIO_ABOUT_ENABLE: true, // 关于作者区块区块开关
-  PROXIO_ABOUT_TITLE: 'FawnPower FP01',
-  PROXIO_ABOUT_TEXT_1: '射频抗衰新答案 Showlook肤动能',
+  PROXIO_ABOUT_TITLE: '射频抗衰新答案',
+  PROXIO_ABOUT_TEXT_1: 'FawnPower肤动能 FP01',
   PROXIO_ABOUT_TEXT_2:
     'With a background in architecture, I now apply my expertise to product design, blending aesthetics, functionality, and innovation. My goal is to create modern, user-focused designs that bring your vision to life.',
-  PROXIO_ABOUT_PHOTO_URL: '/avatar.png',
+  PROXIO_ABOUT_PHOTO_URL: 'https://gitee.com/jz391/img-host/raw/master/avat-cg3.webp',
   PROXIO_ABOUT_KEY_1: '经验年限',
   PROXIO_ABOUT_VAL_1: '10年+',
   PROXIO_ABOUT_KEY_2: '客户',
@@ -212,33 +213,37 @@ const CONFIG = {
       name: '友情链接',
       menus: [
         {
-          title: 'Tangly的学习笔记',
-          href: 'https://xiaolu.love',
+          title: 'SHOWLOOK中国',
+          href: 'https://showlook.pro',
         },
         {
-          title: 'ShowlookFans',
-          href: 'https://xiaolu.love',
+          title: '医美315',
+          href: 'https://yimei315.com',
+        },
+       {
+          title: '中国卫健委',
+          href: 'https://www.nhc.gov.cn',
         }
       ]
     },
     {
-      name: '开发者',
+      name: 'SHOWLOOK小鹿医疗',
       menus: [
-        { title: 'Github', href: 'https://xiaolu.love' },
+        { title: 'SHOWLOOK品牌介绍', href: 'https://xiaolu.love' },
         {
-          title: '开发帮助',
+          title: 'FawnPower肤动能 FP01',
           href: 'https://xiaolu.love',
         },
         {
-          title: '功能反馈',
+          title: '顾客体验',
           href: 'https://xiaolu.love'
         },
         {
-          title: '技术讨论',
+          title: '案例/对比/记录',
           href: 'https://xiaolu.love'
         },
         {
-          title: '关于作者',
+          title: '相关报道',
           href: 'https://xiaolu.love',
         }
       ]

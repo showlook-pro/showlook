@@ -19,8 +19,8 @@ export const Team = () => {
                 <div className='container mx-auto wow fadeInUp' data-wow-delay='.2s'>
                     <div className='flex flex-col md:flex-row -mx-4 justify-between'>
                         {/* 左边肖像图 */}
-                        <div className='mx-6 mb-6 max-w-96 border-gray-200 dark:border-[#333333] dark:bg-dark-1 border rounded-2xl overflow-hidden'>
-                            <LazyImage alt={AUTHOR} src={PROXIO_ABOUT_PHOTO_URL} className='object-cover h-full' />
+                        <div className='mx-6 mb-6 w-full md:w-96 h-72 md:h-96 flex-shrink-0 border-gray-200 dark:border-[#333333] dark:bg-dark-1 border rounded-2xl overflow-hidden'>
+                            <LazyImage alt={AUTHOR} src={PROXIO_ABOUT_PHOTO_URL} className='object-cover w-full h-full' />
                         </div>
                         {/* 右侧文字说明 */}
                         <div className='flex flex-col px-4 space-y-4 mx-auto justify-between max-w-[485px]'>
@@ -36,7 +36,7 @@ export const Team = () => {
                                 dangerouslySetInnerHTML={{
                                     __html: siteConfig('PROXIO_ABOUT_TEXT_2')
                                 }}
-                                className='text-base text-body-color dark:text-dark-6'></p>
+                                className='text-base leading-8 text-body-color/80 dark:text-dark-6/80'></p>
                             {/* 数值四宫格 */}
                             <div className='grid grid-cols-2 grid-rows-2 pt-6 gap-4'>
                                 <KeyVal k={siteConfig('PROXIO_ABOUT_KEY_1')} v={siteConfig('PROXIO_ABOUT_VAL_1')} />
