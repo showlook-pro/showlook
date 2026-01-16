@@ -195,7 +195,7 @@ const CONFIG = {
   PROXIO_ABOUT_BUTTON_TEXT: '详细了解 Showlook肤动能',
 
   // 横向滚动文字
-  PROXIO_BRANDS_ENABLE: true, // 滚动文字
+  PROXIO_BRANDS_ENABLE: false, // 滚动文字
   PROXIO_BRANDS: [
     'Web Design',
     'Logo Design',
