@@ -211,6 +211,56 @@ const Style = () => {
     color: rgb(136 153 168 / var(--tw-text-opacity));
   }
 
+  #theme-proxio .proxio-blog-card{
+    position: relative;
+    display: block;
+  }
+
+  #theme-proxio .proxio-blog-card__image{
+    display: block;
+    transition: transform 0.5s ease, filter 0.3s ease, opacity 0.3s ease;
+  }
+
+  #theme-proxio .proxio-blog-card__overlay{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  #theme-proxio .proxio-blog-card__summary{
+    max-width: 370px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgb(17 25 40);
+  }
+
+  #theme-proxio .proxio-blog-card:hover .proxio-blog-card__image{
+    filter: blur(6px);
+    opacity: 0.4;
+    transform: scale(1.03);
+  }
+
+  #theme-proxio .proxio-blog-card:hover .proxio-blog-card__overlay{
+    opacity: 1;
+  }
+
+  :is(.dark #theme-proxio .proxio-blog-card__overlay){
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  :is(.dark #theme-proxio .proxio-blog-card__summary){
+    color: rgb(255 255 255);
+  }
+
   
 .common-carousel .swiper-button-next:after,
 .common-carousel .swiper-button-prev:after{

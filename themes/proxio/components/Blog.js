@@ -14,7 +14,7 @@ export const Blog = ({ posts }) => {
     return null
   }
 
-  // 博客列表默认显示summary文字，当鼠标指向时显示文章封面。这里可选把summary文字替换成图片占位符。
+  // 博客列表默认显示图片，鼠标指向时背景变模糊并变淡，显示摘要文字。
   const PROXIO_BLOG_PLACEHOLDER_IMG_URL_1 = siteConfig(
     'PROXIO_BLOG_PLACEHOLDER_IMG_URL_1'
   )
@@ -63,35 +63,36 @@ export const Blog = ({ posts }) => {
               } else if (index === 3) {
                 coverImg = PROXIO_BLOG_PLACEHOLDER_IMG_URL_4
               }
+              const displayImg = coverImg || item.pageCoverThumbnail
               return (
                 <div key={index} className='w-full px-4'>
                   <div
                     className='wow fadeInUp group mb-10 relative overflow-hidden blog'
                     data-wow-delay='.1s'>
                     <div className='relative rounded-xl border overflow-hidden shadow-md dark:border-gray-700 dark:bg-gray-800'>
-                      <SmartLink href={item?.href} className='block'>
-                        {item.pageCoverThumbnail && (
-                          // 图片半透明
+                      <SmartLink
+                        href={item?.href}
+                        className='relative block proxio-blog-card'>
+                        {displayImg ? (
                           <LazyImage
-                            src={item.pageCoverThumbnail}
+                            src={displayImg}
                             alt={item.title}
-                            className='w-full h-80 object-cover transition-transform duration-500 rounded-xl'
+                            className='proxio-blog-card__image w-full h-80 object-cover rounded-xl'
                           />
-                        )}
-                        {/* 遮罩层，仅覆盖图片部分 */}
-                        <div className='absolute inset-0 bg-gray-100 dark:bg-hexo-black-gray transition-all duration-500 group-hover:opacity-50 group-hover:bg-black' />
-                        {/* 鼠标悬停时显示的文字内容 */}
-                        <div className='absolute inset-0 flex items-center justify-center group-hover:scale-110 duration-200 group-hover:text-white'>
-                          {!coverImg && (
-                            <p className='max-w-[370px] text-base text-body-color dark:text-dark-6 flex items-center justify-center duration-200 group-hover:text-white '>
+                        ) : (
+                          <div className='flex h-80 items-center justify-center rounded-xl bg-gray-100 px-6 text-center dark:bg-hexo-black-gray'>
+                            <p className='text-base text-body-color dark:text-dark-6'>
                               {item.summary}
                             </p>
-                          )}
-                          <LazyImage
-                            src={coverImg}
-                            className='absolute max-h-full object-cover'
-                          />
-                        </div>
+                          </div>
+                        )}
+                        {displayImg && (
+                          <div className='proxio-blog-card__overlay'>
+                            <p className='proxio-blog-card__summary'>
+                              {item.summary}
+                            </p>
+                          </div>
+                        )}
                       </SmartLink>
                     </div>
                     {/* 内容部分 */}
