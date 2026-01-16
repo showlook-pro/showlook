@@ -52,10 +52,14 @@ export const MenuItem = ({
 
           {/* 子菜单 */}
           <div
-            className={`submenu dark:border-gray-600 relative left-0 top-full w-[250px] rounded-sm bg-white p-4 transition-all duration-200 ease-out dark:bg-dark-2 lg:absolute lg:shadow-lg ${
+            className={`submenu dark:border-gray-600 relative left-0 top-full w-[250px] rounded-sm bg-white p-4 dark:bg-[#3858F9] transition-all duration-200 ease-out overflow-hidden lg:absolute lg:shadow-lg lg:overflow-visible lg:max-h-none ${
               isSubMenuOpen
-                ? 'opacity-100 translate-y-0 pointer-events-auto'
-                : 'opacity-0 -translate-y-2 pointer-events-none'
+                ? 'opacity-100 translate-y-0 max-h-96 pointer-events-auto'
+                : 'opacity-0 -translate-y-2 max-h-0 pointer-events-none'
+            } ${
+              isSubMenuOpen
+                ? 'lg:opacity-100 lg:translate-y-0 lg:pointer-events-auto lg:visible'
+                : 'lg:opacity-0 lg:-translate-y-2 lg:pointer-events-none lg:invisible'
             }`}>
             {link.subMenus.map((sLink, index) => (
               <SmartLink

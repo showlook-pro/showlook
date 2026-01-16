@@ -97,8 +97,10 @@ export const MenuList = props => {
 
       <nav
         id='navbarCollapse'
-        className={`absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6 ${
-          showMenu ? '' : 'hidden'
+        className={`absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-[#3858F9] transition-all duration-200 ease-out origin-top overflow-hidden lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent lg:overflow-visible lg:opacity-100 lg:translate-y-0 lg:scale-100 lg:max-h-none lg:pointer-events-auto xl:px-6 ${
+          showMenu
+            ? 'opacity-100 translate-y-0 scale-100 max-h-[80vh] pointer-events-auto overflow-y-auto'
+            : 'opacity-0 -translate-y-2 scale-95 max-h-0 pointer-events-none'
         }`}>
         <ul className='blcok lg:flex 2xl:ml-20'>
           {links?.map((link, index) => (

@@ -172,6 +172,31 @@ const Style = () => {
     filter: brightness(0) invert(1);
   }
 
+  @media (max-width: 959px) {
+    #theme-proxio #navbarCollapse .ud-menu-scroll,
+    #theme-proxio #navbarCollapse .submenu-item > button{
+      color: #111928;
+    }
+
+    #theme-proxio #navbarCollapse .submenu a{
+      color: #111928;
+    }
+
+    html.dark #theme-proxio #navbarCollapse .ud-menu-scroll,
+    html.dark #theme-proxio #navbarCollapse .submenu-item > button,
+    html.dark #theme-proxio #navbarCollapse .submenu a{
+      color: #ffffff;
+    }
+  }
+
+  @media (min-width: 960px) {
+    html.dark #theme-proxio #navbarCollapse .ud-menu-scroll,
+    html.dark #theme-proxio #navbarCollapse .submenu-item > button,
+    html.dark #theme-proxio #navbarCollapse .submenu a{
+      color: #ffffff;
+    }
+  }
+
   #navbarCollapse li .ud-menu-scroll.active{
     opacity: 0.7;
   }
