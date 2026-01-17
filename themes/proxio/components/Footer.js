@@ -51,7 +51,7 @@ export const Footer = ({ title }) => {
               return (
                 <div
                   key={index}
-                  className='flex flex-col items-center text-center'
+                  className='flex flex-col items-center text-center lg:items-end lg:text-right'
                 >
                   <div className='font-bold text-xl dark:text-white lg:pb-8 pb-4'>
                     {group.name}

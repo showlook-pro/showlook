@@ -158,7 +158,6 @@ const LayoutIndex = props => {
  */
 const LayoutSlug = props => {
     const { post, lock, validPassword } = props
-
     // 如果 是 /article/[slug] 的文章路径则視情況进行重定向到另一个域名
     const router = useRouter()
     if (
