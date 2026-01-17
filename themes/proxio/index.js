@@ -179,7 +179,7 @@ const LayoutSlug = props => {
 
     return (
         <>
-            <Banner title={post?.title} description={post?.summary} />
+            <Banner title={post?.title} description={post?.summary} tags={post?.tags} />
             <div className='container grow'>
                 <div className='flex flex-wrap justify-center -mx-4'>
                     <div id='container-inner' className='w-full p-4'>

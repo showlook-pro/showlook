@@ -1,12 +1,14 @@
+import SmartLink from '@/components/SmartLink'
+
 /**
  * 页面顶部宣传栏
  * @returns
  */
-export const Banner = ({ title, description }) => {
+export const Banner = ({ title, description, tags }) => {
   return (
     <>
       {/* <!-- ====== Banner Section Start --> */}
-      <div className='relative z-10 overflow-hidden pb-[60px] pt-[120px] dark:bg-dark md:pt-[130px] lg:pt-[160px]'>
+      <div className='relative z-10 overflow-hidden pb-[40px] pt-[120px] dark:bg-dark md:pt-[130px] lg:pt-[160px]'>
         <div className='absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-stroke/0 via-stroke to-stroke/0 dark:via-dark-3'></div>
         <div className='container'>
           <div className='flex flex-wrap items-center -mx-4'>
@@ -18,6 +20,18 @@ export const Banner = ({ title, description }) => {
                 <p className='mb-5 text-base text-body-color dark:text-dark-6'>
                   {description}
                 </p>
+                {tags?.length > 0 && (
+                  <div className='mt-6 flex flex-wrap justify-center gap-2 text-xs text-gray-500 dark:text-gray-400'>
+                    {tags.map(tag => (
+                      <SmartLink
+                        key={tag}
+                        href={`/tag/${encodeURIComponent(tag)}`}
+                        className='rounded-full border border-gray-200 px-2 py-1 transition-colors hover:border-primary hover:text-primary dark:border-gray-700'>
+                        #{tag}
+                      </SmartLink>
+                    ))}
+                  </div>
+                )}
 
                 {/* <ul className="flex items-center justify-center gap-[10px]">
                 <li>
