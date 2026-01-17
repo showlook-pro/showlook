@@ -25,11 +25,8 @@ export const CTA = () => {
                       {siteConfig('PROXIO_CTA_TITLE')}
                     </span>
                   </div>
-                  <h2 className='mb-4 text-3xl font-bold dark:text-white md:text-[38px] md:leading-[1.44]'>
-
-                    <span className='text-3xl font-normal md:text-[40px]'>
-                      {siteConfig('PROXIO_CTA_TITLE_2')}
-                    </span>
+                  <h2 className='my-5 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]'>
+                    {siteConfig('PROXIO_CTA_TITLE_2')}
                   </h2>
                   <p className='mx-auto mb-8 max-w-[515px] text-base leading-[1.5] dark:text-white'>
                     {siteConfig('PROXIO_CTA_DESCRIPTION')}

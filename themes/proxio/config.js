@@ -8,7 +8,7 @@ const CONFIG = {
 
   // 英雄区块导航
   PROXIO_HERO_ENABLE: true, // 开启英雄区
-  PROXIO_HERO_TITLE_1: '肤动能FawnPower FP01', // 英雄区文字
+  PROXIO_HERO_TITLE_1: '肤动能FawnPower', // 英雄区文字
   PROXIO_HERO_TITLE_2: '射频抗衰新宠 风靡明星圈的抗衰答案', // 英雄区文字
   // 英雄区两个按钮，如果TEXT留空则隐藏按钮
   PROXIO_HERO_BUTTON_1_TEXT: '中国区官网', // 英雄区按钮
@@ -267,7 +267,7 @@ const CONFIG = {
   // 页面底部的行动呼吁模块
   PROXIO_CTA_ENABLE: true,
   PROXIO_CTA_TITLE: '让合适的项目，遇见合适的机构',
-  PROXIO_CTA_TITLE_2: '让我们立刻启动您的项目',
+  PROXIO_CTA_TITLE_2: '获取FP01引进方案',
   PROXIO_CTA_DESCRIPTION:
     '如果有意引进FawnPower FP01，可点击下方按钮联系SHOWLOOK市场专员。他们将提供产品资料、培训与交付流程说明',
   PROXIO_CTA_BUTTON: true, // 是否显示按钮
