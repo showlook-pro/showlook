@@ -52,9 +52,9 @@ export const MenuItem = ({
 
           {/* 子菜单 */}
           <div
-            className={`submenu dark:border-gray-600 relative left-0 top-full w-[250px] rounded-sm bg-white p-4 dark:bg-[#3858F9] transition-all duration-200 ease-out overflow-hidden lg:absolute lg:shadow-lg lg:overflow-visible lg:max-h-none ${
+            className={`submenu dark:border-gray-600 relative left-0 top-full w-[250px] rounded-sm bg-white p-0 dark:bg-[#3858F9] transition-all duration-200 ease-out overflow-hidden lg:absolute lg:p-4 lg:shadow-lg lg:overflow-visible lg:max-h-none ${
               isSubMenuOpen
-                ? 'opacity-100 translate-y-0 max-h-96 pointer-events-auto'
+                ? 'opacity-100 translate-y-0 max-h-96 pointer-events-auto p-4'
                 : 'opacity-0 -translate-y-2 max-h-0 pointer-events-none'
             } ${
               isSubMenuOpen
