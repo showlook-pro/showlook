@@ -278,6 +278,37 @@ const Style = () => {
     color: rgb(136 153 168 / var(--tw-text-opacity));
   }
 
+  #theme-proxio .scroll-hint__text{
+    letter-spacing: 0.08em;
+  }
+
+  @keyframes scroll-hint-float{
+    0%{
+      transform: translateY(-2px);
+      opacity: 0.35;
+    }
+    50%{
+      transform: translateY(6px);
+      opacity: 0.7;
+    }
+    100%{
+      transform: translateY(-2px);
+      opacity: 0.35;
+    }
+  }
+
+  @keyframes scroll-hint-fade{
+    0%{
+      opacity: 0.35;
+    }
+    50%{
+      opacity: 0.7;
+    }
+    100%{
+      opacity: 0.35;
+    }
+  }
+
   #theme-proxio .proxio-blog-card{
     position: relative;
     display: block;

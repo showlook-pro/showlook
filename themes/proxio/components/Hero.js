@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { useEffect, useState } from 'react'
 import LazyImage from '@/components/LazyImage'
 import { siteConfig } from '@/lib/config'
 import CONFIG from '../config'
@@ -28,6 +29,25 @@ export const Hero = props => {
     null,
     config
   )
+  const [showScrollHint, setShowScrollHint] = useState(true)
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
+    if (window.scrollY > 10) {
+      setShowScrollHint(false)
+      return
+    }
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setShowScrollHint(false)
+        window.removeEventListener('scroll', handleScroll)
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   return (
     <>
       {/* <!-- ====== Hero Section Start --> */}
@@ -91,6 +111,21 @@ export const Hero = props => {
                   </li>
                 )}
               </ul>
+              {showScrollHint && (
+                <div className='scroll-hint mt-6 flex flex-col items-center gap-2 text-xs text-slate-600/80 dark:text-slate-200/70 md:hidden'>
+                  <div
+                    className='scroll-hint__icon text-base'
+                    style={{ animation: 'scroll-hint-float 2.4s ease-in-out infinite' }}
+                    aria-hidden='true'>
+                    <i className='fa-solid fa-hand-point-down' />
+                  </div>
+                  <div
+                    className='scroll-hint__text'
+                    style={{ animation: 'scroll-hint-fade 2.4s ease-in-out infinite' }}>
+                    下滑有更多精彩内容
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
