@@ -8,7 +8,7 @@ export const Banner = ({ title, description, tags }) => {
   return (
     <>
       {/* <!-- ====== Banner Section Start --> */}
-      <div className='relative z-10 overflow-hidden pb-[40px] pt-[120px] dark:bg-dark md:pt-[130px] lg:pt-[160px]'>
+      <div className='relative z-10 overflow-hidden pb-[24px] pt-[120px] dark:bg-dark md:pt-[130px] lg:pt-[160px]'>
         <div className='absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-stroke/0 via-stroke to-stroke/0 dark:via-dark-3'></div>
         <div className='container'>
           <div className='flex flex-wrap items-center -mx-4'>
@@ -21,7 +21,7 @@ export const Banner = ({ title, description, tags }) => {
                   {description}
                 </p>
                 {tags?.length > 0 && (
-                  <div className='mt-6 flex flex-wrap justify-center gap-2 text-xs text-gray-500 dark:text-gray-400'>
+                  <div className='mt-10 flex flex-wrap justify-center gap-2 text-xs text-gray-500 dark:text-gray-400'>
                     {tags.map(tag => (
                       <SmartLink
                         key={tag}
