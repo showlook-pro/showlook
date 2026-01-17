@@ -49,7 +49,7 @@ export const Logo = props => {
           width={24}
           height={20}
           alt={siteConfig('AUTHOR')}
-          className='mr-2 hidden md:inline-block header-logo-icon'
+          className='mr-2 inline-block header-logo-icon'
         />
         {/* logo文字 */}
         <span
