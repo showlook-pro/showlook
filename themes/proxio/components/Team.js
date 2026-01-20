@@ -68,7 +68,7 @@ const KeyVal = ({ k, v }) => {
         return null;
     }
     return (
-        <div className='space-y-2'>
+        <div className='space-y-2 text-center'>
             <div className='dark:text-dark-6'>{k}</div>
             <div className='dark:text-white text-2xl font-semibold'>{v}</div>
         </div>
