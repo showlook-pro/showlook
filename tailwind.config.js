@@ -27,6 +27,9 @@ module.exports = {
       padding: '16px'
     },
     extend: {
+      spacing: {
+        30: '7.5rem'
+      },
       colors: {
         day: {
           DEFAULT: BLOG.BACKGROUND_LIGHT || '#ffffff'

@@ -813,6 +813,11 @@ code[class*='language-'] {
   .notion-row .notion-spacer {
     display: none;
   }
+
+  #notion-article .notion-column > .notion-h1,
+  #notion-article .notion-column > .notion-h2 {
+    margin-bottom: 14px;
+  }
 }
 
 .notion-bookmark {

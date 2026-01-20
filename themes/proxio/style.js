@@ -197,6 +197,7 @@ const Style = () => {
     }
   }
 
+
   #navbarCollapse li .ud-menu-scroll.active{
     opacity: 0.7;
   }

@@ -38,7 +38,7 @@ export const Team = () => {
                                 }}
                                 className='text-base leading-8 text-body-color/80 dark:text-dark-6/80'></p>
                             {/* 数值四宫格 */}
-                            <div className='inline-grid grid-cols-[auto_auto] grid-rows-2 pt-6 gap-4 mx-auto md:grid md:grid-cols-2 md:grid-rows-2 md:mx-0 md:w-full'>
+                            <div className='inline-grid grid-cols-[auto_auto] grid-rows-2 pt-6 gap-y-4 gap-x-30 mx-auto md:grid md:grid-cols-2 md:grid-rows-2 md:gap-4 md:mx-0 md:w-full'>
                                 <KeyVal k={siteConfig('PROXIO_ABOUT_KEY_1')} v={siteConfig('PROXIO_ABOUT_VAL_1')} />
                                 <KeyVal k={siteConfig('PROXIO_ABOUT_KEY_2')} v={siteConfig('PROXIO_ABOUT_VAL_2')} />
                                 <KeyVal k={siteConfig('PROXIO_ABOUT_KEY_3')} v={siteConfig('PROXIO_ABOUT_VAL_3')} />
