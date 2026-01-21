@@ -179,7 +179,7 @@ const CONFIG = {
   PROXIO_ABOUT_TITLE: '射频抗衰新答案',
   PROXIO_ABOUT_TEXT_1: 'FawnPower肤动能 FP01',
   PROXIO_ABOUT_TEXT_2:
-    '肤动能(FawnPower FP01)通过温和热效应刺激胶原蛋白收缩与新生，从肌底重构胶原支架。得益于重新架构的高效射频方案，成本较热玛吉大幅降低，目前已成成为在亚洲多个城市，成为大家优选的热玛吉低价平替方案。',
+    '肤动能(FawnPower FP01)通过温和热效应刺激胶原蛋白收缩与新生，从肌底重构胶原支架。得益于重新架构的高效射频方案，成本较热玛吉大幅降低，目前已在亚洲多个城市，成为大家优选的热玛吉低价平替方案。',
   PROXIO_ABOUT_PHOTO_URL: 'https://gitee.com/jz391/img-host/raw/master/avat-cg3.webp',
   PROXIO_ABOUT_KEY_1: '核心频段',
   PROXIO_ABOUT_VAL_1: '6.78MHZ',
