@@ -105,10 +105,12 @@ const LayoutIndex = props => {
                 <>
                     <Blog posts={posts} />
                     {/* 更多文章按钮 */}
-                    <div className='container mx-auto flex justify-end mb-4'>
-                        <SmartLink className='text-lg underline' href={'/archive'}>
-                            <span>{locale.COMMON.MORE}</span>
-                            <i className='ml-2 fas fa-arrow-right' />
+                    <div className='container mx-auto flex justify-center mb-4'>
+                        <SmartLink
+                            className='px-4 py-2 rounded-3xl border dark:border-gray-200 border-[#333333] text-base font-medium text-dark hover:bg-gray-100 dark:text-white dark:hover:bg-white dark:hover:text-black duration-200'
+                            href={'/archive'}>
+                            <span>查看更多动态</span>
+                            <i className='pl-4 fa-solid fa-arrow-right' />
                         </SmartLink>
                     </div>
                 </>

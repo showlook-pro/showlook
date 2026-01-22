@@ -46,12 +46,19 @@ export const Footer = ({ title }) => {
           </div>
 
           {/* 右侧链接区块 */}
-          <div className='mt-8 flex w-full justify-between gap-x-12 sm:w-auto sm:justify-start lg:mt-0'>
+          <div className='mt-8 flex w-full justify-between gap-x-12 pr-2 lg:pr-0 sm:w-auto sm:justify-start lg:mt-0'>
             {PROXIO_FOOTER_LINKS?.map((group, index) => {
+              const isFirst = index === 0
+              const isLast = index === PROXIO_FOOTER_LINKS.length - 1
+              const alignmentClass = isFirst
+                ? 'items-start text-left'
+                : isLast
+                  ? 'items-end text-right'
+                  : 'items-center text-center'
               return (
                 <div
                   key={index}
-                  className='flex flex-col items-center text-center lg:items-end lg:text-right'
+                  className={`flex flex-col ${alignmentClass} lg:items-end lg:text-right`}
                 >
                   <div className='font-bold text-xl dark:text-white lg:pb-8 pb-4'>
                     {group.name}

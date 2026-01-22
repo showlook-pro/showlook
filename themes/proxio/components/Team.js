@@ -15,7 +15,7 @@ export const Team = () => {
             {/* <!-- ====== Team Section Start --> */}
             <section
                 id='team'
-                className='overflow-hidden pb-12 pt-20 lg:pb-[90px] lg:pt-[120px]'>
+                className='overflow-hidden pb-6 pt-20 lg:pb-[60px] lg:pt-[120px]'>
                 <div className='container mx-auto wow fadeInUp' data-wow-delay='.2s'>
                     <div className='flex flex-col md:flex-row -mx-4 justify-between'>
                         {/* 左边肖像图 */}
@@ -23,7 +23,7 @@ export const Team = () => {
                             <LazyImage alt={AUTHOR} src={PROXIO_ABOUT_PHOTO_URL} className='object-cover w-full h-full' />
                         </div>
                         {/* 右侧文字说明 */}
-                        <div className='flex flex-col px-4 gap-4 mx-auto max-w-[485px] md:justify-between'>
+                        <div className='flex flex-col px-4 gap-4 mx-auto max-w-[600px] md:justify-between'>
                             <div>
                                 <span className='px-3 py-0.5 mb-2 dark:bg-dark-1 rounded-2xl border border-gray-200 dark:border-[#333333] dark:text-white'>
                                     {siteConfig('PROXIO_ABOUT_TITLE')}
@@ -45,15 +45,15 @@ export const Team = () => {
                                 <KeyVal k={siteConfig('PROXIO_ABOUT_KEY_4')} v={siteConfig('PROXIO_ABOUT_VAL_4')} />
                             </div>
 
-                            <div className='mt-12 w-full flex justify-center md:mt-8 md:justify-end py-2'>
-                                <SmartLink
-                                    href={siteConfig('PROXIO_ABOUT_BUTTON_URL', '')}
-                                    className='px-4 py-2 rounded-3xl border dark:border-gray-200 border-[#333333] text-base font-medium text-dark hover:bg-gray-100 dark:text-white dark:hover:bg-white dark:hover:text-black duration-200'>
-                                    {siteConfig('PROXIO_ABOUT_BUTTON_TEXT')}
-                                    <i className="pl-4 fa-solid fa-arrow-right"></i>
-                                </SmartLink>
-                            </div>
                         </div>
+                    </div>
+                    <div className='mt-16 w-full flex justify-center md:mt-12 py-2'>
+                        <SmartLink
+                            href={siteConfig('PROXIO_ABOUT_BUTTON_URL', '')}
+                            className='px-4 py-2 rounded-3xl border dark:border-gray-200 border-[#333333] text-base font-medium text-dark hover:bg-gray-100 dark:text-white dark:hover:bg-white dark:hover:text-black duration-200'>
+                            {siteConfig('PROXIO_ABOUT_BUTTON_TEXT')}
+                            <i className="pl-4 fa-solid fa-arrow-right"></i>
+                        </SmartLink>
                     </div>
                 </div>
             </section>
