@@ -1,16 +1,29 @@
 import SmartLink from '@/components/SmartLink'
+import LazyImage from '@/components/LazyImage'
 
 /**
  * 页面顶部宣传栏
  * @returns
  */
-export const Banner = ({ title, description, tags }) => {
+export const Banner = ({ title, description, tags, cover }) => {
   return (
     <>
       {/* <!-- ====== Banner Section Start --> */}
-      <div className='relative z-10 overflow-hidden pb-[24px] pt-[120px] dark:bg-dark md:pt-[130px] lg:pt-[160px]'>
+      <div className='relative z-10 overflow-hidden pb-[24px] pt-[150px] dark:bg-dark md:pt-[170px] lg:pt-[200px]'>
+        {cover && (
+          <>
+            <LazyImage
+              alt={title}
+              src={cover}
+              className='absolute inset-0 h-full w-full object-cover'
+              style={{ filter: 'blur(2px)', opacity: 0.9 }}
+            />
+            <div className='absolute inset-0 bg-black/50'></div>
+            <div className='absolute bottom-0 left-0 h-5/6 w-full bg-gradient-to-t from-white via-white/80 to-transparent dark:from-black dark:via-black/80'></div>
+          </>
+        )}
         <div className='absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-stroke/0 via-stroke to-stroke/0 dark:via-dark-3'></div>
-        <div className='container'>
+        <div className='container relative z-10'>
           <div className='flex flex-wrap items-center -mx-4'>
             <div className='w-full px-4'>
               <div className='text-center'>
