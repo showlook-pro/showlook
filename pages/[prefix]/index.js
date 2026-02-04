@@ -5,13 +5,17 @@ import { siteConfig } from '@/lib/config'
 import { getGlobalData, getPost } from '@/lib/db/getSiteData'
 import { useGlobal } from '@/lib/global'
 import { getPageTableOfContents } from '@/lib/notion/getPageTableOfContents'
-import { getPasswordQuery } from '@/lib/password'
+import {
+  getPasswordQuery,
+  savePathPassword,
+  saveScopePassword
+} from '@/lib/password'
 import { checkSlugHasNoSlash, processPostData } from '@/lib/utils/post'
 import { DynamicLayout } from '@/themes/theme'
 import md5 from 'js-md5'
 import { useRouter } from 'next/router'
 import { idToUuid } from 'notion-utils'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 /**
  * 根据notion的slug访问页面
@@ -32,20 +36,27 @@ const Slug = props => {
    * 验证文章密码
    * @param {*} passInput
    */
-  const validPassword = passInput => {
-    if (!post) {
+  const validPassword = useCallback(
+    passInput => {
+      if (!post) {
+        return false
+      }
+      const passwordSalt = post?.password_salt || post?.slug || post?.id || ''
+      const encrypt = md5(passwordSalt + passInput)
+      if (passInput && encrypt === post?.password) {
+        setLock(false)
+        // 输入密码存入localStorage，下次自动提交
+        savePathPassword(router.asPath, passInput)
+        if (post?.unlock_scope && post?.scope_share_enabled !== false) {
+          saveScopePassword(post.unlock_scope, passInput)
+        }
+        showNotification(locale.COMMON.ARTICLE_UNLOCK_TIPS) // 设置解锁成功提示显示
+        return true
+      }
       return false
-    }
-    const encrypt = md5(post?.slug + passInput)
-    if (passInput && encrypt === post?.password) {
-      setLock(false)
-      // 输入密码存入localStorage，下次自动提交
-      localStorage.setItem('password_' + router.asPath, passInput)
-      showNotification(locale.COMMON.ARTICLE_UNLOCK_TIPS) // 设置解锁成功提示显示
-      return true
-    }
-    return false
-  }
+    },
+    [locale.COMMON.ARTICLE_UNLOCK_TIPS, post, router.asPath, showNotification]
+  )
 
   // 文章加载
   useEffect(() => {
@@ -57,7 +68,7 @@ const Slug = props => {
     }
 
     // 读取上次记录 自动提交密码
-    const passInputs = getPasswordQuery(router.asPath)
+    const passInputs = getPasswordQuery(router.asPath, post?.unlock_scope)
     if (passInputs.length > 0) {
       for (const passInput of passInputs) {
         if (validPassword(passInput)) {
@@ -65,7 +76,7 @@ const Slug = props => {
         }
       }
     }
-  }, [post])
+  }, [post, post?.unlock_scope, router.asPath, validPassword])
 
   // 文章加载
   useEffect(() => {
@@ -79,7 +90,7 @@ const Slug = props => {
       )
       post.toc = getPageTableOfContents(post, post.blockMap)
     }
-  }, [router, lock])
+  }, [router, lock, post])
 
   props = { ...props, lock, validPassword }
   const theme = siteConfig('THEME', BLOG.THEME, props.NOTION_CONFIG)
@@ -136,7 +147,7 @@ export async function getStaticProps({ params: { prefix }, locale }) {
   if (!props?.post) {
     const pageId = prefix
     if (pageId.length >= 32) {
-      const post = await getPost(pageId)
+      const post = await getPost(pageId, props?.allPages)
       props.post = post
     }
   }
