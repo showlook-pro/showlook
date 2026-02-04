@@ -1769,7 +1769,7 @@ svg + .notion-page-title-text {
   white-space: pre-wrap;
   word-break: break-word;
   margin-right: 0.5em;
-  text-indent: 15px;
+  text-indent: 16px;
 }
 
 .notion-collection-view-dropdown {
