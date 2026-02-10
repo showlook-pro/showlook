@@ -37,7 +37,8 @@ const Slug = props => {
    * @param {*} passInput
    */
   const validPassword = useCallback(
-    passInput => {
+    (passInput, options = {}) => {
+      const { notify = true, notifyDuration = 3000 } = options
       if (!post) {
         return false
       }
@@ -50,7 +51,9 @@ const Slug = props => {
         if (post?.unlock_scope && post?.scope_share_enabled !== false) {
           saveScopePassword(post.unlock_scope, passInput)
         }
-        showNotification(locale.COMMON.ARTICLE_UNLOCK_TIPS) // 设置解锁成功提示显示
+        if (notify) {
+          showNotification(locale.COMMON.ARTICLE_UNLOCK_TIPS, notifyDuration) // 设置解锁成功提示显示
+        }
         return true
       }
       return false
@@ -71,7 +74,7 @@ const Slug = props => {
     const passInputs = getPasswordQuery(router.asPath, post?.unlock_scope)
     if (passInputs.length > 0) {
       for (const passInput of passInputs) {
-        if (validPassword(passInput)) {
+        if (validPassword(passInput, { notify: true, notifyDuration: 5000 })) {
           break // 密码验证成功，停止尝试
         }
       }

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 /**
  * 弹框通知
@@ -7,19 +7,35 @@ import { useState } from 'react'
 const useNotification = () => {
   const [message, setMessage] = useState('')
   const [isVisible, setIsVisible] = useState(false)
+  const timerRef = useRef(null)
 
-  const showNotification = msg => {
-    setMessage(msg)
-    setIsVisible(true)
-    setTimeout(() => {
-      closeNotification()
-    }, 3000)
-  }
-
-  const closeNotification = () => {
+  const closeNotification = useCallback(() => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current)
+      timerRef.current = null
+    }
     setIsVisible(false)
     setMessage('')
-  }
+  }, [])
+
+  const showNotification = useCallback((msg, duration = 3000) => {
+    setMessage(msg)
+    setIsVisible(true)
+    if (timerRef.current) {
+      clearTimeout(timerRef.current)
+    }
+    timerRef.current = setTimeout(() => {
+      closeNotification()
+    }, duration)
+  }, [closeNotification])
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current)
+      }
+    }
+  }, [])
 
   // 测试通知效果
   //   const toggleVisible = () => {
